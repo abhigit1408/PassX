@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">PassX</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="one">
+            <h1>Password Manager</h1>
+            <p>We're thrilled to have you here and take the first step towards strengthening your online security. Your
+                trust in us means everything, and we're committed to helping you keep your digital life safe and
+                organized.
+            </p>
+
+            <h2>Add a Password</h2>
+            <form action="/submit" method="post">
+
+                <!-- Text input for Website -->
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website" required>
+                <br> <br>
+
+                <!-- Text input for username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br> <br>
+
+                <!-- Password input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+
+                <div>
+                    <label style="color: red;" id="errorMessage"></label>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+        <div>
+            <h2>Your Passwords <span id="alert"></span></h2>
+            <table>
+                <tr>
+                    <th>Website</th>
+                    <th>UserName</th>
+                    <th>Password</th>
+                    <th>Delete</th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
